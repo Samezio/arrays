@@ -51,7 +51,15 @@ func Test_pick_from_both_side() {
 	fmt.Print("Min Pick: ")
 	fmt.Println(PickMin(array, 4))
 }
-
+func Test_minimum_steps_infite_grid() {
+	matrix := [][]int{{4, 6}, {1, 2}, {4, 5}, {10, 12}}
+	fmt.Println("Points: ")
+	for _, row := range matrix {
+		fmt.Println(row)
+	}
+	fmt.Print("Min Steps: ")
+	fmt.Println(MinSteps(matrix))
+}
 func main() {
 	Test_merge_sort()
 	fmt.Println("--------------------------")
@@ -60,5 +68,7 @@ func main() {
 	Test_spiral_unfolding()
 	fmt.Println("--------------------------")
 	Test_pick_from_both_side()
+	fmt.Println("--------------------------")
+	Test_minimum_steps_infite_grid()
 	fmt.Println("--------------------------")
 }
